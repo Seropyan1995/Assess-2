@@ -1,0 +1,124 @@
+/* set universal margin and border to 0 */
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/*  set all the font-family for all heading elements  */
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Franklin Gothic Medium';
+}
+/* gave font family and size to all <p> */
+p{
+    font-family: monospace;
+    font-size: 14px;
+
+}
+/* overflow: hidden; will keep the nav bar inside of the  */
+header{
+    padding: 0px;
+    background-color: rgb(98, 49, 49);
+    color: rgb(250, 249, 249);
+    overflow: hidden;
+}
+
+header h1 {
+    display: inline-block;
+    background-color: rgb(40, 119, 119);
+    padding-left: 55px;
+    margin: 0px 0px 8px 0px;
+}
+
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+
+}
+header nav ul {
+    list-style-type: none;
+}
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+header a {
+    color: #189797;
+    text-decoration: underline;
+    font-size: 20px;
+}
+/* image resizing : https://stackoverflow.com/questions/14507224/prevent-or-disable-automatic-image-resize-in-a-div-with-css-using-bootstrap */
+/* https://www.w3schools.com/css/css3_images.asp */
+.hero {
+    height: 200px;
+    background-image: url(./images/banner.webp);
+    max-width: none;
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    position: relative;
+    float: right;
+    bottom: -156px;
+    left: -40px;
+    color: black;
+    background-color: aquamarine;
+}
+
+.gridcontainer{
+    display: grid;
+    grid-gap: 50px;
+}
+
+.menu1 {
+    width: 20%;
+    float: left;
+    padding: 68px;
+    border-right: 2px solid black;
+
+}
+
+
+
+.menu2{
+    display: block;
+    flex-wrap: wrap;
+    width: 20%;
+    float: left;
+    padding-bottom: 1980px;
+    border-right: 2px solid black;
+    text-align: center;
+}
+
+.flexcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu3{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    float: left;
+    padding-bottom: 55px;
+    border-right: 2px solid black;
+    margin-bottom: 15px;
+}
+
+.links{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+.links a{
+    color: #189797;
+    text-decoration: underline;
+    margin-right: 50px;
+    font-size: 30px;
+
+}
