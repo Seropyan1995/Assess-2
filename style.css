@@ -47,78 +47,141 @@ header a {
     text-decoration: underline;
     font-size: 20px;
 }
+/* start of hero background */
 /* image resizing : https://stackoverflow.com/questions/14507224/prevent-or-disable-automatic-image-resize-in-a-div-with-css-using-bootstrap */
 /* https://www.w3schools.com/css/css3_images.asp */
 .hero {
+    position: relative;
     height: 200px;
     background-image: url(./images/banner.webp);
     max-width: none;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     margin-bottom: 5px;
 }
 
 .hero h2 {
-    position: relative;
-    float: right;
-    bottom: -156px;
-    left: -40px;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
     color: black;
     background-color: aquamarine;
 }
+/* end of hero background */
 
-.gridcontainer{
-    display: grid;
-    grid-gap: 50px;
+/* start of profile picture */
+
+.profile-image{
+      display: grid;
+      place-items: center;
+      padding-bottom: 20px;
 }
 
-.menu1 {
-    width: 20%;
-    float: left;
-    padding: 68px;
-    border-right: 2px solid black;
+/* End of profile picture */
 
-}
-
-
-
-.menu2{
-    display: block;
-    flex-wrap: wrap;
-    width: 20%;
-    float: left;
-    padding-bottom: 1980px;
-    border-right: 2px solid black;
-    text-align: center;
-}
-
-.flexcontainer{
+/* start of content sidebar */
+.content-sidebar {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: wrap;
+    gap: 15px;
+}
+
+.content-sidebar > *:nth-child(1) {
+    flex: 1 1 10%;
+    min-width: 5ch;
+
+}
+
+.content-sidebar > *:nth-child(2) {
+    flex: 1 1 90%;
+    min-width: 20ch;
+}
+
+
+.content-sidebar h1 {
+    padding-right: 15px;
+}
+
+#aboutme {
+    border-right: 3px solid black;
+    text-align: right;
+}
+
+/* end of content sidebar */
+
+/* start of content work */
+
+.content-work  {
+    display: flex;
+    flex-direction: wrap;
     justify-content: space-around;
+    gap: 15px;
+}
+.content-work *:nth-child(1){
+    flex: 1 1 10%;
+    min-width: 10ch;
+}
+.content-work *:nth-child(2) {
+    flex: 1 1 90%;
+    min-width: 20ch;
+}
+.content-work h1 {
+    padding-right: 15px;
+
+}
+#work {
+    border-right: 3px solid black;
+    text-align: right;
 }
 
-.menu3{
+
+/* end of content work */
+
+/* start of content contact */
+.content-contact {
     display: flex;
+    gap: 15px;
+}
+.content-contact *:nth-child(1) {
+    flex: 1 1 10%;
+    min-width: 5ch;
+}
+.content-contact *:nth-child(2) {
+    flex: 1 1 90%;
+    min-width: 20ch;
+}
+
+.content-contact h1{
+    padding-right: 15px;
+
+}
+
+#contactme {
+    border-right: 3px solid black;
+    text-align: right;
+}
+footer h2 {
     flex-wrap: wrap;
-    width: 20%;
+}
+footer nav {
+    padding-top: 15px;
+    margin-right: 20px;
     float: left;
-    padding-bottom: 55px;
-    border-right: 2px solid black;
-    margin-bottom: 15px;
 }
 
-.links{
-    display: flex;
+footer ul li {
     list-style-type: none;
-    align-items: center;
+    overflow: hidden;
+    display: inline;
+    margin: 10px;
 }
 
-.links a{
+footer a{
     color: #189797;
     text-decoration: underline;
-    margin-right: 50px;
+    margin: 5px;
     font-size: 30px;
 
 }
+/* end of content contact */
