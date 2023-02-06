@@ -1,20 +1,26 @@
-/* set universal margin and border to 0 */
+
 *{
     margin: 0;
     border: 0;
     box-sizing: border-box;
 }
-/*  set all the font-family for all heading elements  */
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'Franklin Gothic Medium';
 }
-/* gave font family and size to all <p> */
+
 p{
     font-family: monospace;
     font-size: 14px;
-
 }
-/* overflow: hidden; will keep the nav bar inside of the  */
+.sidebar {
+    width: 10%;
+    min-width: 15ch;
+    border-right: 3px solid black;
+    text-align: right;
+    padding-right: 5px;
+}
+
 header{
     padding: 0px;
     background-color: rgb(98, 49, 49);
@@ -47,9 +53,6 @@ header a {
     text-decoration: underline;
     font-size: 20px;
 }
-/* start of hero background */
-/* image resizing : https://stackoverflow.com/questions/14507224/prevent-or-disable-automatic-image-resize-in-a-div-with-css-using-bootstrap */
-/* https://www.w3schools.com/css/css3_images.asp */
 .hero {
     position: relative;
     height: 200px;
@@ -81,86 +84,27 @@ header a {
 /* End of profile picture */
 
 /* start of content sidebar */
-.content-sidebar {
+
+.flex-container{
     display: flex;
-    flex-direction: wrap;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.about-me-content {
+    width: 75%;
+    min-width: 30ch;
 }
 
-.content-sidebar > *:nth-child(1) {
-    flex: 1 1 10%;
-    min-width: 5ch;
-
-}
-
-.content-sidebar > *:nth-child(2) {
-    flex: 1 1 90%;
-    min-width: 20ch;
-}
-
-
-.content-sidebar h1 {
-    padding-right: 15px;
-}
-
-#aboutme {
-    border-right: 3px solid black;
-    text-align: right;
-}
-
-/* end of content sidebar */
-
-/* start of content work */
-
-.content-work  {
+.content-work-img {
+    width: 75%;
+    min-width: 30ch;
     display: flex;
-    flex-direction: wrap;
-    justify-content: space-around;
-    gap: 15px;
-}
-.content-work *:nth-child(1){
-    flex: 1 1 10%;
-    min-width: 10ch;
-}
-.content-work *:nth-child(2) {
-    flex: 1 1 90%;
-    min-width: 20ch;
-}
-.content-work h1 {
-    padding-right: 15px;
-
-}
-#work {
-    border-right: 3px solid black;
-    text-align: right;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+    overflow: hidden;
 }
 
-
-/* end of content work */
-
-/* start of content contact */
-.content-contact {
-    display: flex;
-    gap: 15px;
-}
-.content-contact *:nth-child(1) {
-    flex: 1 1 10%;
-    min-width: 5ch;
-}
-.content-contact *:nth-child(2) {
-    flex: 1 1 90%;
-    min-width: 20ch;
-}
-
-.content-contact h1{
-    padding-right: 15px;
-
-}
-
-#contactme {
-    border-right: 3px solid black;
-    text-align: right;
-}
 footer h2 {
     flex-wrap: wrap;
 }
@@ -184,4 +128,3 @@ footer a{
     font-size: 30px;
 
 }
-/* end of content contact */
