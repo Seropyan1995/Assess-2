@@ -1,18 +1,19 @@
-
+/* set universal selector */
 *{
     margin: 0;
     border: 0;
     box-sizing: border-box;
 }
-
+/* gave all headings same font */
 h1, h2, h3, h4, h5, h6{
     font-family: 'Franklin Gothic Medium';
 }
-
+/* gave <p> their own font family and size */
 p{
     font-family: monospace;
     font-size: 14px;
 }
+/*  gave all content topics a sidebar class to show on the left side of screen */
 .sidebar {
     width: 10%;
     min-width: 15ch;
@@ -20,7 +21,10 @@ p{
     text-align: right;
     padding-right: 5px;
 }
+/*  Header Starts */
 
+/* used header on its own without class since theres only one header */
+/* overflow hidden to prevent content from escaping the box */
 header{
     padding: 0px;
     background-color: rgb(98, 49, 49);
@@ -39,11 +43,10 @@ header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
+    overflow: hidden;
 
 }
-header nav ul {
-    list-style-type: none;
-}
+/* added inline and margin to give space and align nav content */
 header nav ul li {
     display: inline-block;
     margin-left: 25px;
@@ -53,6 +56,9 @@ header a {
     text-decoration: underline;
     font-size: 20px;
 }
+/* Header ends here */
+
+/* hero background starts here */
 .hero {
     position: relative;
     height: 200px;
@@ -62,6 +68,8 @@ header a {
     background-position: center;
     background-size: cover;
     margin-bottom: 5px;
+    border-bottom: 10px inset red;
+
 }
 
 .hero h2 {
@@ -70,11 +78,12 @@ header a {
     right: 16px;
     color: black;
     background-color: aquamarine;
+
 }
 /* end of hero background */
 
 /* start of profile picture */
-
+/* one way of centering image, although there are many more, decided to try new way  */
 .profile-image{
       display: grid;
       place-items: center;
@@ -82,14 +91,14 @@ header a {
 }
 
 /* End of profile picture */
-
-/* start of content sidebar */
-
+/*  Start of section content with About me/Work/Contact me */
+/* class containing the flex for all content section */
 .flex-container{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
+
 .about-me-content {
     width: 75%;
     min-width: 30ch;
@@ -102,9 +111,32 @@ header a {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 5px;
-    overflow: hidden;
 }
-
+/* set border and color to applications */
+.content-work-img img{
+    border: 5px inset rgb(18, 219, 48);
+}
+.content-work-img h2{
+    border: 5px inset rgb(18, 219, 48);
+    text-align: center;
+    background-color: rgb(105, 189, 93);
+}
+/* added hover scale to all application links */
+#app1:hover {
+    transform: scale(1.1);
+}
+#app2:hover {
+    transform: scale(1.1);
+}
+#app3:hover {
+    transform: scale(1.1);
+}
+#app4:hover {
+    transform: scale(1.1);
+}
+#app5:hover {
+    transform: scale(1.1);
+}
 footer h2 {
     flex-wrap: wrap;
 }
@@ -127,44 +159,53 @@ footer a{
     margin: 5px;
     font-size: 30px;
 }
+/* End of section content */
 
+/*set media queries for when min width is 992px  */
 @media screen and (min-width: 992px) {
     header {
     width: 100%;
     }
-
      }
      .profile-image {
         height: 100%;
         width: 100%;
     }
 
-
+/* set media queries for when max width is 768px */
 @media screen and (max-width: 768px) {
     header {
        text-align: center;
         width: 100%;
     }
     .about-me-content {
-        margin-right: 10em;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: right;
+    }
+    .sidebar{
         margin-left: 10em;
-        width: 90%;
     }
     .content-work-img {
-        width: 65%;
+        margin: 0 auto;
     }
     .flex-container nav{
         margin: -11px;
     }
 }
+/* set mobile phone layout to 450px avg */
 @media screen and (max-width: 450px) {
     .about-me-content {
-        margin-right: 5em;
-        margin-left: 5em;
+        margin-right: 1em;
+        margin-left: 1em;
         width: 90%;
     }
-    .content-work-img {
-        width: auto;
+    .content-work-img{
+        margin: 0 auto;
+    }
+    .sidebar{
+        margin-right: 1em;
+        margin-left: 1em;
     }
     .hero h2{
         margin: 15px;
