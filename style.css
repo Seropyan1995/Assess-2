@@ -132,23 +132,13 @@ footer a{
     header {
     width: 100%;
     }
-    .about-me-content {
-        margin-right: 5em;
-        margin-left: 5em;
-        width: 90%;
-    }
-    media screen and (max-width: 992px) {
-        .resume-section {
-             margin-right:auto;
-             height: 100%;
-             width: 100%;
-         }
+
      }
      .profile-image {
         height: 100%;
         width: 100%;
     }
-}
+
 
 @media screen and (max-width: 768px) {
     header {
