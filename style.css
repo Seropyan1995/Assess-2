@@ -126,5 +126,62 @@ footer a{
     text-decoration: underline;
     margin: 5px;
     font-size: 30px;
+}
 
+@media screen and (min-width: 992px) {
+    header {
+    width: 100%;
+    }
+    .about-me-content {
+        margin-right: 5em;
+        margin-left: 5em;
+        width: 90%;
+    }
+    media screen and (max-width: 992px) {
+        .resume-section {
+             margin-right:auto;
+             height: 100%;
+             width: 100%;
+         }
+     }
+     .profile-image {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+       text-align: center;
+        width: 100%;
+    }
+    .about-me-content {
+        margin-right: 10em;
+        margin-left: 10em;
+        width: 90%;
+    }
+    .content-work-img {
+        width: 65%;
+    }
+    .flex-container nav{
+        margin: -11px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .about-me-content {
+        margin-right: 5em;
+        margin-left: 5em;
+        width: 90%;
+    }
+    .content-work-img {
+        width: auto;
+    }
+    .hero h2{
+        margin: 15px;
+        right: -5px;
+    }
+    .flex-container nav a{
+        margin: -11px;
+        font-size: 20px;
+    }
 }
